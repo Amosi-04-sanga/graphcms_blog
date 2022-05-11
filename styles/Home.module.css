@@ -1,0 +1,47 @@
+.navBar {
+    background-color: rgb(243, 248, 248);
+    box-shadow: 0 0 4px 0 rgba(128, 128, 128, .2);
+    z-index: 11;
+}
+
+.categories {
+    width: 80vw;
+    padding: 1rem 0;
+    margin: auto;
+}
+
+.categories span {
+    cursor: pointer;
+}
+
+.postContainer {
+    width: 25vw;
+    background-color: white;
+    box-shadow: 0 0 5px 0 rgba(95, 116, 71, 0.301);
+}
+
+.featuredImage {
+    width: 100%;
+    height: 10rem;
+}
+
+.socialIcons svg path {
+    fill: rgb(28, 10, 128);
+}
+
+.socialIcons svg:hover path {
+   fill: rgb(81, 10, 117);
+   transition: fill 200ms ease-in-out;
+}
+
+.socialIcons svg {
+    margin: .5rem 0;
+    cursor: pointer;
+}
+
+.postsContainer {
+    display: grid;
+    grid-template-columns: repeat( auto-fill, minmax(25vw, 1fr) );
+}
+
+
