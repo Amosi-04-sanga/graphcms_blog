@@ -51,7 +51,7 @@ export default function Home({ posts }) {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-12">
           <div className="col-span-1 md:col-span-8">
-            <h1 className='text-center text-3xl capitalize' >blog articles</h1>
+            <h1 className='text-center text-3xl capitalize' >latest blog articles</h1>
             <div className={styles.postsContainer}>
               {
                 posts.map((post, index) => (

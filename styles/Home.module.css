@@ -18,6 +18,12 @@
     width: 25vw;
     background-color: white;
     box-shadow: 0 0 5px 0 rgba(95, 116, 71, 0.301);
+    border-radius: 0;
+    transition: all 200ms ease-in;
+}
+
+.postContainer:hover {
+    border-radius: .01rem;
 }
 
 .featuredImage {
@@ -30,8 +36,8 @@
 }
 
 .socialIcons svg:hover path {
-   fill: rgb(81, 10, 117);
-   transition: fill 200ms ease-in-out;
+    fill: rgb(81, 10, 117);
+    transition: fill 200ms ease-in-out;
 }
 
 .socialIcons svg {
@@ -41,7 +47,5 @@
 
 .postsContainer {
     display: grid;
-    grid-template-columns: repeat( auto-fill, minmax(25vw, 1fr) );
+    grid-template-columns: repeat(auto-fill, minmax(25vw, 1fr));
 }
-
-

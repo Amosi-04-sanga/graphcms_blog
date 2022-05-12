@@ -3,7 +3,7 @@ import { request, gql } from 'graphql-request'
 const graphqlAPI = process.env.GRAPHCMS_ENDPOINT
 
 export const getPosts = async () => {
-    const query = gql`
+  const query = gql`
     query MyQuery {
     postsConnection {
       edges {
@@ -30,8 +30,8 @@ export const getPosts = async () => {
   }
   
    `
-    const result = await request(graphqlAPI, query)
-    return result.postsConnection.edges
+  const result = await request(graphqlAPI, query)
+  return result.postsConnection.edges
 
 }
 
