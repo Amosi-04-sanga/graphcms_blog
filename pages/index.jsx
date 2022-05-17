@@ -2,28 +2,13 @@ import Head from 'next/head'
 import PostCard from "../components/PostCard"
 import Categories from '../components/Categories'
 import PostsWidget from '../components/PostsWidget'
-import { getPosts } from '../services'
+import Author from '../components/Author'
 import styles from '../styles/Home.module.css'
 import Link from 'next/link'
+import { getPosts } from '../services'
 
 
 export default function Home({ posts }) {
-
-  /*  useEffect(() => {
-  
-      const fetchPosts = async () => {
-        await getPosts()
-          .then(res => {
-            const {data} = res
-            console.log(res)
-          })
-      }
-      fetchPosts()
-  
-    }, [])
-  
-  */
-  console.log(posts);
 
   return (
     <>
@@ -31,7 +16,7 @@ export default function Home({ posts }) {
         <title>mosdev blog</title>
       </Head>
 
-      <div className="container mx-auto py-4 px-16 mb-8">
+      <div className="container mx-auto py-4 pl-14 pr-2 mb-8">
         <div className={`${styles.socialIcons} flex flex-col fixed left-2 top-1/2`}>
           <span>
             <svg className='w-4 h-4' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z" /></svg>
@@ -49,11 +34,12 @@ export default function Home({ posts }) {
             <svg className='w-4 h-4' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M290.7 311L95 269.7 86.8 309l195.7 41zm51-87L188.2 95.7l-25.5 30.8 153.5 128.3zm-31.2 39.7L129.2 179l-16.7 36.5L293.7 300zM262 32l-32 24 119.3 160.3 32-24zm20.5 328h-200v39.7h200zm39.7 80H42.7V320h-40v160h359.5V320h-40z" /></svg>
           </span>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-12">
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-12">
           <div className="col-span-1 md:col-span-8">
             <h1 className='text-center text-3xl capitalize' >latest blog articles</h1>
             <div className={styles.postsContainer}>
               {
+
                 posts.map((post, index) => (
                   <Link key={index} href={`/post/${post.node.slug}`} >
                     <div className="container">
@@ -61,13 +47,17 @@ export default function Home({ posts }) {
                     </div>
                   </Link>
                 ))
+
               }
             </div>
           </div>
           <div className="col-span-1 md:col-span-4">
-            <div className="md:sticky relative top-16 bg-orange-200">
+            <div className="md:sticky relative top-16">
               < PostsWidget />
+              <div className={styles.underline}></div>
               < Categories />
+              <div className={styles.underline}></div>
+              < Author />
             </div>
           </div>
         </div>
@@ -86,6 +76,7 @@ export async function getStaticProps(context) {
   return {
     props: { posts }, // will be passed to the page component as props
   }
+
 }
 
 

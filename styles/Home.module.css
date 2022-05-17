@@ -15,7 +15,6 @@
 }
 
 .postContainer {
-    width: 25vw;
     background-color: white;
     box-shadow: 0 0 5px 0 rgba(95, 116, 71, 0.301);
     border-radius: 0;
@@ -49,3 +48,57 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(25vw, 1fr));
 }
+
+.underline {
+    height: 4px;
+    width: 40%;
+    background-color: rgba(0, 0, 255, 0.182);
+}
+
+@media screen and (max-width: 570px) {
+    .postsContainer {
+        grid-template-columns: auto;
+    }
+}
+
+@media screen and (min-width: 355px) and (max-width: 570px) {
+    .postContainer {
+        margin: 1.5rem;
+    }
+}
+
+@media screen and (min-width: 570px) {
+    .postsContainer {
+        grid-template-columns: auto auto;
+    }
+    .postContainer {
+        margin: .3rem;
+    }
+}
+
+
+/* PostsWidget and categories */
+.categories,
+.PostsWidget {
+    font-size: small;
+    font-style: italic;
+}
+.PostsWidgetPhoto {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 6vw;
+}
+
+.photoWrapper {
+    width: 5rem;
+    height: 5rem;
+    padding: .04rem;
+    background-color: rgba(137, 43, 226, 0.596);
+    border-radius: 1rem;
+}
+
+.photoWrapper img {
+    border-radius: inherit;
+}
+
+
