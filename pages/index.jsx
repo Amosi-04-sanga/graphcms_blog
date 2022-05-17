@@ -4,7 +4,6 @@ import Categories from '../components/Categories'
 import PostsWidget from '../components/PostsWidget'
 import Author from '../components/Author'
 import styles from '../styles/Home.module.css'
-import Link from 'next/link'
 import { getPosts } from '../services'
 
 
@@ -41,11 +40,9 @@ export default function Home({ posts }) {
               {
 
                 posts.map((post, index) => (
-                  <Link key={index} href={`/post/${post.node.slug}`} >
-                    <div className="container">
-                      < PostCard post={post.node} />
-                    </div>
-                  </Link>
+                  <div key={index} className="container">
+                    < PostCard post={post.node} />
+                  </div>
                 ))
 
               }

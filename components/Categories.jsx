@@ -17,7 +17,6 @@ const Categories = () => {
     fetchCategories()
   }, [])
 
-  console.log(categories);
 
   return (
     <>

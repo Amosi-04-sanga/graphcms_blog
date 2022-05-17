@@ -1,6 +1,8 @@
 import React from 'react'
 import styles from '../styles/Home.module.css'
 import moment from 'moment'
+import Link from 'next/link'
+
 
 const PostCard = ({ post }) => {
   return (
@@ -15,7 +17,9 @@ const PostCard = ({ post }) => {
           </div>
           <p className='indent-4 text-sm' > {post.excerpt.slice(0, 200)}... </p>
         </div>
-        <button className={`block cursor-pointer mx-auto my-4 capitalize bg-orange-200 p-2`} >read more</button>
+        <Link href={`/post/${post.slug}`} >
+          <button className={`block cursor-pointer mx-auto my-4 capitalize bg-orange-200 p-2`} >read more</button>
+        </Link>
       </div>
     </>
   )
