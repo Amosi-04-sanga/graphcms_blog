@@ -31,49 +31,11 @@ const Header = () => {
                     </div>
                 </div>
             </nav>
-            <div className={`${styles.categories} font-bold flex justify-between`}>
-                <Link href="/category/htmlcss" >
-                    <span>html & css</span>
-                </Link>
-                <Link href="/category/javascript" >
-                    <span>vanilla JS</span>
-                </Link>
-                <Link href="/category/react" >
-                    <span>react</span>
-                </Link>
-                <Link href="/category/nextjs" >
-                    <span>next js</span>
-                </Link>
-                <Link href="/category/node-express" >
-                    <span>node & express</span>
-                </Link>
-                <Link href="/category/mongodb" >
-                    <span>mongodb</span>
-                </Link>
-                
-            </div>
         </>
     )
 }
 
 export default Header
-
-
-
-/*
-<div className="hidden md:contents">
-                        {
-                            categories.map(item => (
-                                <Link key={item.slug} href={`/category/${item.slug}`} >
-                                    <span className='float-right mr-4 cursor-pointer hover:underline' >
-                                        {item.name}
-                                    </span>
-                                </Link>
-                            ))
-                        }
-                    </div>
-
-*/
 
 
 

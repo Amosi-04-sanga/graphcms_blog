@@ -6,29 +6,21 @@ import { getRecentPosts, getSimilarPosts } from '../services'
 import styles from '../styles/Home.module.css'
 
 
-const PostsWidget = ({ slug, categories }) => {
+const PostsWidget = ({ categories, slug }) => {
 
     const [relatedPosts, setrelatedPosts] = useState([])
 
     useEffect(() => {
-
-        const fetchPosts = async () => {
-            if (slug) {
-                await getSimilarPosts(categories, slug)
-                    .then(res => {
-                        setrelatedPosts(res)
-                    })
-            }
-            else {
-                await getRecentPosts()
-                    .then(res => {
-                        setrelatedPosts(res)
-                    })
-            }
+        if (slug) {
+            getSimilarPosts(categories, slug).then((result) => {
+                setrelatedPosts(result);
+            });
+        } else {
+            getRecentPosts().then((result) => {
+                setrelatedPosts(result);
+            });
         }
-        fetchPosts()
-
-    }, [slug])
+    }, [slug]);
 
     return (
         <>

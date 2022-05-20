@@ -13,7 +13,7 @@ const PostDetails = ({ post }) => {
       }
 
       if (obj.italic) {
-        modifiedText = (<em key={index}>{text}</em>);
+        modifiedText = (<i key={index}>{text}</i>);
       }
 
       if (obj.underline) {
@@ -27,7 +27,7 @@ const PostDetails = ({ post }) => {
       case 'heading-two':
         return <h2 key={index} className="text-xl mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h2>;
       case 'code-block':
-        return <div className="bg-blue-500 rounded text-white my-4 p-2 overflow-auto font-thin">
+        return <div className="bg-orange-50 text-blue-900 rounded my-4 p-2 overflow-auto font-thin">
           <pre key={index} className="text-sm font-semibold mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</pre>;
         </div>
       case 'paragraph':
@@ -63,7 +63,7 @@ const PostDetails = ({ post }) => {
         <p className='md:mr-4 mr-px' >posted on {moment(post.createdAt).format("DD/MM/YYYY")} </p>
         <p>author: {post.author.name} </p>
       </div>
-      <p className='text-center my-4 uppercase text-sm' > {post.title} </p>
+      <p className='text-center mb-4 mt-12 font-bold uppercase text-sm' > {post.title} </p>
       {
         post.content.raw.children.map((typeObj, index) => {
           const children = typeObj.children.map((item, itemIndex) => getContentFragment(itemIndex, item.text, item))

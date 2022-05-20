@@ -3,7 +3,7 @@ import PostDetail from '../../components/PostDetail'
 import Comments from '../../components/Comments'
 import CommentsForm from '../../components/CommentsForm'
 import Categories from '../../components/Categories'
-import PostsWidget from '../../components/PostsWidget'
+import PostWidget from '../../components/PostsWidget'
 
 
 const PostDetails = ({ post }) => {
@@ -18,8 +18,8 @@ const PostDetails = ({ post }) => {
                 </div>
                 <div className="col-span-1 md:col-span-4">
                     <div className="sticky top-20">
-                        < PostsWidget />
-                        < Categories />
+                        <PostWidget  />
+                        <Categories />
                     </div>
                 </div>
             </div>
@@ -27,9 +27,10 @@ const PostDetails = ({ post }) => {
     )
 }
 
+
 export default PostDetails
 
-
+// slug={post.slug} categories={post.categories.map((category) => category.slug)}
 
 export async function getStaticProps({ params }) {
 
