@@ -24,6 +24,12 @@ const PostDetails = ({ post }) => {
     switch (type) {
       case 'heading-three':
         return <h3 key={index} className="text-xl font-semibold mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h3>;
+      case 'heading-two':
+        return <h2 key={index} className="text-xl mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h2>;
+      case 'code-block':
+        return <div className="bg-blue-500 rounded text-white my-4 p-2 overflow-auto font-thin">
+          <pre key={index} className="text-sm font-semibold mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</pre>;
+        </div>
       case 'paragraph':
         return <p key={index} className="mb-8">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</p>;
       case 'heading-four':
@@ -36,6 +42,7 @@ const PostDetails = ({ post }) => {
             height={obj.height}
             width={"100%"}
             src={obj.src}
+            className="postFrontPhoto"
           />
         );
       default:
@@ -44,7 +51,7 @@ const PostDetails = ({ post }) => {
   };
 
   return (
-    <div className='container' >
+    <div className='pr-2'>
       <div className={styles.featuredImage}>
         <img
           src={post.featuredImage.url}
