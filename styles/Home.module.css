@@ -81,7 +81,6 @@
 .categories,
 .PostsWidget {
     font-size: small;
-    font-style: italic;
 }
 .PostsWidgetPhoto {
     width: 3rem;
