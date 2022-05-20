@@ -17,8 +17,10 @@ const PostDetails = ({ post }) => {
                     < Comments slug={post.slug} />
                 </div>
                 <div className="col-span-1 md:col-span-4">
-                    < PostsWidget />
-                    < Categories />
+                    <div className="sticky top-20">
+                        < PostsWidget />
+                        < Categories />
+                    </div>
                 </div>
             </div>
         </div>
@@ -43,7 +45,7 @@ export async function getStaticPaths() {
     const posts = await getPosts()
 
     return {
-        paths: posts.map( ({node: {slug}}) => ({params: {slug}})),
+        paths: posts.map(({ node: { slug } }) => ({ params: { slug } })),
         fallback: false
     };
 }
