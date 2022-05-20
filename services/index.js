@@ -153,6 +153,6 @@ export const authorInfo = async () => {
 
 export const submitComment = async (obj) => {
   const result = await axios.post("/api/comments", obj)
-  return result
-}
+  return result;
+};
 
