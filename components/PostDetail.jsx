@@ -27,7 +27,7 @@ const PostDetails = ({ post }) => {
       case 'heading-two':
         return <h2 key={index} className="text-xl mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h2>;
       case 'code-block':
-        return <div className="bg-orange-50 text-blue-900 rounded my-4 p-2 overflow-auto font-thin">
+        return <div className="bg-orange-100 text-blue-900 rounded my-4 p-2 overflow-auto font-thin">
           <pre key={index} className="text-sm font-semibold mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</pre>;
         </div>
       case 'paragraph':
