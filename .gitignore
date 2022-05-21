@@ -2,13 +2,12 @@
 
 # dependencies
 /node_modules
-/.pnp
+.eiv 
+ /.pnp
 .pnp.js
 
 # testing
 /coverage
-
-/.env
 
 # next.js
 /.next/
