@@ -6,7 +6,7 @@ const categories = [{ name: "HTML/CSS", slug: "html-css" }, { name: "JavaScript"
 const Header = () => {
     return (
         <>
-            <nav className={`${styles.navBar} py-3 px-8 h-14 relative sticky top-0`} >
+            <nav className={`${styles.navBar} py-3 px-2 md:px-8 h-14 relative sticky top-0`} >
                 <div className="flex justify-between">
                     <div>
                         <Link href="/" >
