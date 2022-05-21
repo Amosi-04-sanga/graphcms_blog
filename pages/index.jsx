@@ -35,6 +35,7 @@ export default function Home({ posts }) {
         </div>
         <div className="grid grid-cols-1 gap-4 md:grid-cols-12">
           <div className="col-span-1 md:col-span-8">
+              <img className='block mx-auto mt-2' width="300px" height="50px" src="/welcome.webp" alt="" />
             <h1 className='text-center text-3xl capitalize' >latest blog articles</h1>
             <div className={styles.postsContainer}>
               {
