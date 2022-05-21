@@ -9,7 +9,7 @@ import PostWidget from '../../components/PostsWidget'
 const PostDetails = ({ post }) => {
 
     return (
-        <div className='container pl-1' >
+        <div className='container pl-2' >
             <div className="grid grid-cols-1 md:grid-cols-12">
                 <div className="col-span-1 md:col-span-8">
                     < PostDetail post={post} />
