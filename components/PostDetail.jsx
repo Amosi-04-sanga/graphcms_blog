@@ -51,7 +51,7 @@ const PostDetails = ({ post }) => {
   };
 
   return (
-    <div className=''>
+    <div>
       <div className={styles.featuredImage}>
         <img
           src={post.featuredImage.url}
