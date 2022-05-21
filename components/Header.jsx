@@ -15,9 +15,6 @@ const Header = () => {
                     </div>
                     <div>
                         <div className="contents">
-                            <Link href="/" >
-                                <span className='mr-4 cursor-pointer' >Home</span>
-                            </Link>
                             <Link href="/about" >
                                 <span className='mr-4 cursor-pointer' >About</span>
                             </Link>
