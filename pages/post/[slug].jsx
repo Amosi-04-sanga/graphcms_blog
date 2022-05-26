@@ -1,7 +1,7 @@
 import { getPosts, getPostDetails } from '../../services'
 import PostDetail from '../../components/PostDetail'
-import Comments from '../../components/Comments'
-import CommentsForm from '../../components/CommentsForm'
+/*import Comments from '../../components/Comments'
+import CommentsForm from '../../components/CommentsForm'*/
 import Categories from '../../components/Categories'
 import PostWidget from '../../components/PostsWidget'
 
@@ -9,16 +9,14 @@ import PostWidget from '../../components/PostsWidget'
 const PostDetails = ({ post }) => {
 
     return (
-        <div className='container pl-2' >
+        <div >
             <div className="grid grid-cols-1 md:grid-cols-12">
                 <div className="col-span-1 md:col-span-8">
                     < PostDetail post={post} />
-                    < CommentsForm slug={post.slug} />
-                    < Comments slug={post.slug} />
                 </div>
                 <div className="col-span-1 md:col-span-4">
                     <div className="sticky top-20">
-                        <PostWidget  />
+                        <PostWidget />
                         <Categories />
                     </div>
                 </div>
@@ -50,3 +48,5 @@ export async function getStaticPaths() {
         fallback: false
     };
 }
+
+

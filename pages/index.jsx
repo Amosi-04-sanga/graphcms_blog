@@ -15,7 +15,7 @@ export default function Home({ posts }) {
         <title>mosdev blog</title>
       </Head>
 
-      <div className="container mx-auto p-1 md:py-4 md:pl-14 mb-8">
+      <div className="container mx-auto md:py-4 mb-8">
 
         <div className="grid grid-cols-1 gap-4 md:grid-cols-12">
           <div className="col-span-1 md:col-span-8">
@@ -33,8 +33,8 @@ export default function Home({ posts }) {
               }
             </div>
           </div>
-          <div className="col-span-1 md:col-span-4">
-            <div className="md:sticky relative top-16">
+          <div className="col-span-1 md:col-span-4 text-sm px-4">
+            <div className="md:sticky top-16">
               < PostsWidget />
               <div className={styles.underline}></div>
               < Categories />
@@ -44,7 +44,6 @@ export default function Home({ posts }) {
           </div>
         </div>
       </div>
-
     </>
   )
 }

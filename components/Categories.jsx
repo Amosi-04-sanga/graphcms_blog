@@ -20,7 +20,7 @@ const Categories = () => {
 
   return (
     <>
-      <div className="my-2 px-4 rounded">
+      <div className="my-2 rounded">
         <h1 className='pt-2' >
           Categories
         </h1>

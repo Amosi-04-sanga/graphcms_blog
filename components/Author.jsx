@@ -15,10 +15,10 @@ const About = () => {
 
   return (
     <>
-      <div className="p-4">
+      <div>
         {
           articleAuthor.length !== 0 && (
-            <div className='italic text-sm' >
+            <div>
               <div className={`${styles.photoWrapper} m-auto`}>
                 <img
                   src={articleAuthor[0].node.author.photo.url}

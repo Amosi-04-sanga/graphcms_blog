@@ -27,9 +27,11 @@ const PostDetails = ({ post }) => {
       case 'heading-two':
         return <h2 key={index} className="text-xl mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h2>;
       case 'code-block':
-        return <div className="bg-orange-100 text-blue-900 rounded my-4 p-2 overflow-auto font-thin">
-          <pre key={index} className="text-sm font-semibold mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</pre>;
-        </div>
+        return (
+          <div className="bg-orange-100 text-blue-900 rounded my-4 p-2 overflow-auto font-thin">
+            <pre key={index} className="text-sm font-semibold mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</pre>;
+          </div>
+        )
       case 'paragraph':
         return <p key={index} className="mb-8">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</p>;
       case 'heading-four':
@@ -59,7 +61,7 @@ const PostDetails = ({ post }) => {
           className='w-full h-full'
         />
       </div>
-      <div className="my-2 md:justify-start flex items-cemter justify-between text-sm opacity-80">
+      <div className="my-2 md:justify-start flex items-center justify-between text-sm opacity-80">
         <p className='md:mr-4 mr-px' >posted on {moment(post.createdAt).format("DD/MM/YYYY")} </p>
         <p>author: {post.author.name} </p>
       </div>
