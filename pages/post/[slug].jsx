@@ -10,11 +10,11 @@ const PostDetails = ({ post }) => {
 
     return (
         <div >
-            <div className="grid grid-cols-1 md:grid-cols-12">
+            <div className="grid grid-cols-1 md:grid-cols-12 p-2">
                 <div className="col-span-1 md:col-span-8">
                     < PostDetail post={post} />
                 </div>
-                <div className="col-span-1 md:col-span-4">
+                <div className="col-span-1 md:col-span-4 text-sm px-4">
                     <div className="sticky top-20">
                         <PostWidget />
                         <Categories />
