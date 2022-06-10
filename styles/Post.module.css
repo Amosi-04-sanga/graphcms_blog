@@ -2,3 +2,7 @@
     display: block;
     height: 40vh;
 }
+
+.whitePaper {
+    box-shadow: 0 0 5px 0 rgb(223, 210, 210);
+}
