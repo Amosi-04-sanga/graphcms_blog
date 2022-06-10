@@ -38,14 +38,16 @@ const PostDetails = ({ post }) => {
         return <h4 key={index} className="text-md font-semibold mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h4>;
       case 'image':
         return (
-          <img
-            key={index}
-            alt={obj.title}
-            height={obj.height}
-            width={"100%"}
-            src={obj.src}
-            className="postFrontPhoto"
-          />
+          <div data-role="imagemagnifier" data-magnifier-mode="glass" >
+            <img
+              key={index}
+              alt={obj.title}
+              height={obj.height}
+              width={"100%"}
+              src={obj.src}
+              className="postFrontPhoto"
+            />
+          </div>
         );
       default:
         return modifiedText;
