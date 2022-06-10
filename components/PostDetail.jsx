@@ -29,7 +29,7 @@ const PostDetails = ({ post }) => {
       case 'code-block':
         return (
           <div className="bg-orange-100 text-blue-900 rounded my-4 p-2 overflow-auto font-thin">
-            <pre key={index} className="text-sm font-semibold mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</pre>;
+            <pre key={index} className="text-sm font-semibold mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</pre>
           </div>
         )
       case 'paragraph':
