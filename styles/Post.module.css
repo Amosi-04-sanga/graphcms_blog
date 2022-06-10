@@ -6,3 +6,9 @@
 .whitePaper {
     box-shadow: 0 0 5px 0 rgb(223, 210, 210);
 }
+
+.notes {
+    border-left: 2px solid rgba(75, 56, 19, 0.326);
+    padding-left: .5rem;
+    border-radius: .2rem;
+}

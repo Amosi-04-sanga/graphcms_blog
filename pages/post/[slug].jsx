@@ -4,9 +4,16 @@ import Comments from '../../components/Comments'
 import CommentsForm from '../../components/CommentsForm'
 import Categories from '../../components/Categories'
 import PostWidget from '../../components/PostsWidget'
+import { useEffect } from 'react'
+import { useRouter } from 'next/router'
 
 
 const PostDetails = ({ post }) => {
+    const router = useRouter()
+    useEffect(() => {
+      router.push(`/post/${post.slug}`)
+    }, [])
+    
 
     return (
         <div >

@@ -34,8 +34,8 @@ const PostDetails = ({ post }) => {
         )
       case 'paragraph':
         return <p key={index} className="my-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</p>;
-      case 'heading-four':
-        return <h4 key={index} className="text-md font-semibold mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h4>;
+      case 'heading-six':
+        return <i key={index} className={`text-md block my-2 ${styles.notes}`}>{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</i>;
       case 'image':
         return (
           <div data-role="imagemagnifier" data-magnifier-mode="glass" >

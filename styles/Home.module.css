@@ -105,3 +105,20 @@
 .photoWrapper img {
     border-radius: inherit;
 }
+
+/* to top arrow */
+.arrow {
+    width: 2rem;
+    height: 2.4rem;
+    fill: rgba(30, 27, 51, 0.852);
+    cursor: pointer;
+    animation: hang 1.5s ease-in-out infinite;
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+}
+
+@keyframes hang {
+    0%{bottom: 1rem;}
+    70%{bottom: 1.2rem;}
+}
