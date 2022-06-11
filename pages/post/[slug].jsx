@@ -11,7 +11,7 @@ import { useRouter } from 'next/router'
 const PostDetails = ({ post }) => {
     const router = useRouter()
     useEffect(() => {
-      router.push(`/post/${post.slug}`)
+      router.reload()
     }, [])
     
 
