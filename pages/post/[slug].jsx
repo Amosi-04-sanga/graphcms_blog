@@ -10,15 +10,16 @@ import { useRouter } from 'next/router'
 
 const PostDetails = ({ post }) => {
     const router = useRouter()
-    useEffect(() => {
-      router.reload()
-    }, [])
     
+    /*useEffect(() => {
+      window.location.reload()
+    }, [post.slug])
+    */
 
     return (
         <div >
             <div className="grid grid-cols-1 md:grid-cols-12 p-2">
-                <div className="col-span-1 md:col-span-8">
+                <div className="col-span-1 md:col-span-8 topBorder">
                     < PostDetail post={post} />
                     < CommentsForm slug={post.slug} />
                     < Comments slug={post.slug} />

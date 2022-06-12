@@ -64,17 +64,19 @@ const PostDetails = ({ post }) => {
         />
       </div>
       <div className="my-2 md:justify-start flex items-center justify-between text-sm opacity-80">
-        <p className='md:mr-4 mr-px' >posted on {moment(post.createdAt).format("DD/MM/YYYY")} </p>
+        <p className='md:mr-4 mr-px' >updated on {moment(post.updatedAt).format("DD/MM/YYYY")} </p>
         <p>author: {post.author.name} </p>
       </div>
       <p className='text-center mb-4 mt-12 font-bold uppercase text-sm' > {post.title} </p>
-      {
-        post.content.raw.children.map((typeObj, index) => {
-          const children = typeObj.children.map((item, itemIndex) => getContentFragment(itemIndex, item.text, item))
+      <div className="p-2">
+        {
+          post.content.raw.children.map((typeObj, index) => {
+            const children = typeObj.children.map((item, itemIndex) => getContentFragment(itemIndex, item.text, item))
 
-          return getContentFragment(index, children, typeObj, typeObj.type)
-        })
-      }
+            return getContentFragment(index, children, typeObj, typeObj.type)
+          })
+        }
+      </div>
     </div>
   )
 }

@@ -26,3 +26,11 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.topBorder {
+  border-top: 4px solid rgba(0, 128, 0, 0.571);
+  border-top-left-radius: .3rem;
+  border-top-right-radius: .3rem;
+}
+
+

@@ -12,15 +12,14 @@ export default function Home({ posts }) {
   return (
     <>
       <Head>
-        <title>mosdev blog</title>
+        <title>sangaamos blog</title>
       </Head>
 
       <div className="container p-2 mx-auto md:py-4 mb-8">
 
         <div className="grid grid-cols-1 gap-4 md:grid-cols-12">
           <div className="col-span-1 md:col-span-8">
-            <img className='block mx-auto mt-2' width="300px" height="50px" src="/welcome.webp" alt="" />
-            <h1 className='text-center text-3xl capitalize' >latest blog articles</h1>
+            <h1 className='text-center text-3xl mb-4 capitalize' >latest blog articles</h1>
             <div className={styles.postsContainer}>
               {
 
@@ -36,9 +35,9 @@ export default function Home({ posts }) {
           <div className="col-span-1 md:col-span-4 text-sm px-4">
             <div className="md:sticky top-16">
               < PostsWidget />
-              <div className={styles.underline}></div>
+              <div className={`${styles.underline} mt-4`}></div>
               < Categories />
-              <div className={styles.underline}></div>
+              <div className={`${styles.underline} mb-4`}></div>
               < Author />
             </div>
           </div>

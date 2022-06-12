@@ -20,7 +20,7 @@ const Categories = () => {
 
   return (
     <>
-      <div className="my-4 rounded">
+      <div className="rounded">
         <h1 className='pt-2' >
           Categories
         </h1>
@@ -29,7 +29,7 @@ const Categories = () => {
             categories.length !== 0 && categories.map((category, index) => (
               <div key={index} className="py-px">
                 <Link href={`/category/${category.slug}`} >
-                  <p className='cursor-pointer' > {category.name} </p>
+                  <span className='cursor-pointer' > {category.name} </span>
                 </Link>
               </div>
             ))
