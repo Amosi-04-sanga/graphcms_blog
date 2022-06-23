@@ -38,7 +38,7 @@ const PostDetails = ({ post }) => {
                     href={href}
                     className="text-red-800"
                     target={openInNewTab ? '_blank' : '_self'}
-                    rel={rel || 'noreferrer'}
+                    rel='noopener'
                     {...rest}
                   >
                     {children}
