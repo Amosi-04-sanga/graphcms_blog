@@ -1,5 +1,6 @@
 import { RichText } from '@graphcms/rich-text-react-renderer'
 import moment from 'moment'
+import Link from 'next/link'
 import React from 'react'
 import styles from '../styles/Post.module.css'
 

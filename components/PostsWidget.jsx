@@ -20,7 +20,7 @@ const PostsWidget = ({ categories, slug }) => {
                 setrelatedPosts(result);
             });
         }
-    }, [slug]);
+    }, [slug, categories]);
 
     return (
         <>
