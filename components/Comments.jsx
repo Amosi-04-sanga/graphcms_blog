@@ -60,7 +60,7 @@ const Comments = ({ slug }) => {
       .then(res => {
         setComments(res)
       })
-  }, [])
+  }, [slug])
 
   console.log(comments);
 
