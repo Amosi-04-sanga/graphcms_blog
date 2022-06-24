@@ -5,10 +5,20 @@ import PostsWidget from '../components/PostsWidget'
 import Author from '../components/Author'
 import styles from '../styles/Home.module.css'
 import { getPosts } from '../services'
+import { useEffect, useState } from 'react'
 
 
-export default function Home({ posts }) {
+export default function Home() {
+  const [posts, setPosts] = useState([])
+  useEffect(() => {
+    const fetchPosts = async () => {
+      const posts = await getPosts()
+      setPosts(posts.reverse())
+    }
+    fetchPosts()
+  }, [])
 
+  console.log(posts);
   return (
     <>
       <Head>
@@ -22,13 +32,11 @@ export default function Home({ posts }) {
             <h1 className='text-center text-3xl mb-4 capitalize' >latest blog articles</h1>
             <div className={styles.postsContainer}>
               {
-
                 posts.map((post, index) => (
                   <div key={index} className="container">
                     < PostCard post={post.node} />
                   </div>
                 ))
-
               }
             </div>
           </div>
@@ -48,7 +56,7 @@ export default function Home({ posts }) {
 }
 
 
-
+/*
 export async function getStaticProps(context) {
 
   const posts = (await getPosts()) || []
@@ -59,4 +67,4 @@ export async function getStaticProps(context) {
 
 }
 
-
+*/

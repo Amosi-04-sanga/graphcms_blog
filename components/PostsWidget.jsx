@@ -17,7 +17,7 @@ const PostsWidget = ({ categories, slug }) => {
             });
         } else {
             getRecentPosts().then((result) => {
-                setrelatedPosts(result);
+                setrelatedPosts(result.reverse());
             });
         }
     }, [slug, categories]);
