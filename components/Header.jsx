@@ -55,13 +55,13 @@ const Header = () => {
                     </div>
                     <div className={`${!menuOpened ? styles.hideNav : styles.headerNavigation}`}>
                         <Link href="/about" >
-                            <span className='mr-4 cursor-pointer' ><a>About</a></span>
+                            <a><span className='mr-4 cursor-pointer' >About</span></a>
                         </Link>
                         <Link href="/contacts" >
-                            <span className='mr-4 cursor-pointer' ><a>Contacts</a></span>
+                            <a><span className='mr-4 cursor-pointer' >Contacts</span></a>
                         </Link>
                         <Link href="/portifolio" >
-                            <span className='mr-4 cursor-pointer' ><a>portifolio</a></span>
+                            <a><span className='mr-4 cursor-pointer' >portifolio</span></a>
                         </Link>
                     </div>
                 </div>
