@@ -146,7 +146,7 @@
         align-items: center;
         width: 100%;
         height: calc(100vh - 3.5rem);
-        background-color: rgba(238, 130, 238, .9);
+        background-color: rgb(218, 230, 230);
 
         user-select: none;
     }
