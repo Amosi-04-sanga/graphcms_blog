@@ -29,19 +29,6 @@
     height: 10rem;
 }
 
-.socialIcons svg path {
-    fill: rgb(28, 10, 128);
-}
-
-.socialIcons svg:hover path {
-    fill: rgb(81, 10, 117);
-    transition: fill 200ms ease-in-out;
-}
-
-.socialIcons svg {
-    margin: .5rem 0;
-    cursor: pointer;
-}
 
 .postsContainer {
     display: grid;
@@ -115,12 +102,63 @@
     animation: hang 1.5s ease-in-out infinite;
     position: fixed;
     bottom: 1rem;
-    right: 1rem;
+    right: .8rem;
     z-index: 11;
     border-radius: .4rem;
 }
 
 @keyframes hang {
-    0%{bottom: 1rem;}
-    70%{bottom: 1.2rem;}
+    0% {
+        bottom: 1rem;
+    }
+
+    70% {
+        bottom: 1.2rem;
+    }
+}
+
+
+
+/* menu bar for small screen */
+/* large screens */
+@media screen and (min-width: 450px) {
+    .hideNav {
+        display: block;
+    }
+    
+    .menuIcon {
+        display: none;
+    }
+}
+/* small to ordinary screen */
+@media screen and (max-width: 450px) {
+    .hideNav {
+        display: none;
+    }
+
+    .headerNavigation {
+        position: fixed;
+        top: 3.5rem;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: calc(100vh - 3.5rem);
+        background-color: rgba(238, 130, 238, .9);
+
+        user-select: none;
+    }
+ 
+    
+    .headerNavigation span {
+        margin: 3vh auto;
+        background-color: rgb(19, 121, 121);
+        display: block;
+        width: 6rem;
+        padding: .4rem 0;
+        text-align: center;
+        transform: skew(10deg);
+    }
 }

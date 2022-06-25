@@ -25,7 +25,7 @@ export default function Home() {
         <title>sangaamos blog</title>
       </Head>
 
-      <div className="container p-2 mx-auto md:py-4 mb-8">
+      <div className="p-2 mx-auto md:py-4 mb-8">
 
         <div className="grid grid-cols-1 gap-4 md:grid-cols-12">
           <div className="col-span-1 md:col-span-8">
