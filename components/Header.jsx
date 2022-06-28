@@ -25,11 +25,11 @@ const Header = () => {
 
 
     const darkModeHandler = () => {
-        console.log("night");
         setIsDark(!isDark)
+        window.localStorage.setItem("mode", "dark")
     }
     const lightModeHandler = () => {
-        console.log("light");
+        window.localStorage.setItem("mode", "light")
         setIsDark(!isDark)
     }
 

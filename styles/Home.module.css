@@ -50,7 +50,7 @@
 
 @media screen and (min-width: 570px) {
     .postsContainer {
-        grid-template-columns: auto auto;
+        grid-template-columns: 1fr 1fr;
     }
 
     .postContainer {
