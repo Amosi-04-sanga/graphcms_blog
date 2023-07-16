@@ -54,6 +54,3 @@ export async function getStaticPaths() {
 }
 
 
-
-
-

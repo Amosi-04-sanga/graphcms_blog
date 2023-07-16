@@ -22,7 +22,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>sangaamos blog</title>
+        <title>Godlove</title>
       </Head>
 
       <div className="p-2 mx-auto md:py-4 mb-8">

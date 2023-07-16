@@ -39,7 +39,7 @@ const Header = () => {
                 <div className="flex justify-between">
                     <div>
                         <Link href="/" >
-                            <span className='cursor-pointer font-bold text-xl' >MOSDEV</span>
+                            <span className='cursor-pointer font-bold text-xl' >GODLOVE</span>
                         </Link>
                     </div>
 
