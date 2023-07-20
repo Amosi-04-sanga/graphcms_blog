@@ -6,6 +6,7 @@ import Author from '../components/Author'
 import styles from '../styles/Home.module.css'
 import { getPosts } from '../services'
 import { useEffect, useState } from 'react'
+import Hero from '../components/Hero'
 
 
 export default function Home() {
@@ -26,8 +27,8 @@ export default function Home() {
       </Head>
 
       <div className="p-2 mx-auto md:py-4 mb-8">
-
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-12">
+        < Hero />
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-12 mt-8">
           <div className="col-span-1 md:col-span-8">
             <h1 className='text-center text-3xl mb-4 capitalize' >latest blog articles</h1>
             <div className={styles.postsContainer}>
@@ -57,16 +58,3 @@ export default function Home() {
 
 
 
-
-/*
-export async function getStaticProps(context) {
-
-  const posts = (await getPosts()) || []
-
-  return {
-    props: { posts }, // will be passed to the page component as props
-  }
-
-}
-
-*/

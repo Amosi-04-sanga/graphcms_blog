@@ -26,7 +26,7 @@ const About = () => {
                   className='w-full h-full'
                 />
               </div>
-              <p className='mb-2 text-center' > {articleAuthor[0].node.author.name} </p>
+              <p className='mb-2 text-center uppercase' > {articleAuthor[0].node.author.name} </p>
               <p className='indent-2' > {articleAuthor[0].node.author.bio} </p>
             </div>
           )

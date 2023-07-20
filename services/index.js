@@ -1,3 +1,4 @@
+
 import axios from 'axios'
 import { request, gql } from 'graphql-request'
 
@@ -88,27 +89,6 @@ export const getRecentPosts = async () => {
 
 }
 
-/*export const getSimilarPosts = async (categories, slug) => {
-  const query = gql`
-       query SimilarPosts( $categories: String!, $slug: [String!] ) {
-           posts(
-               where: { slug_not:$slug, AND: { categories_some: {slug_in:$categories} } }
-               last: 2 
-           ) {
-            title
-            featuredImage {
-                url
-            }
-            createdAt
-            slug
-           }
-       }
-    `
-
-  const result = await request(graphqlAPI, query, { categories, slug })
-  return result.posts
-
-} */
 
 export const getSimilarPosts = async (categories, slug) => {
   const query = gql`
@@ -194,7 +174,46 @@ export const getComments = async (slug) => {
   return result.comments;
 };
 
+export const getCategoryPost = async (slug) => {
+  const query = gql`
+    query GetCategoryPost($slug: String!) {
+      postsConnection(where: {categories_some: {slug: $slug}}) {
+        edges {
+          cursor
+          node {
+            author {
+              bio
+              name
+              id
+              photo {
+                url
+              }
+            }
+            createdAt
+            slug
+            title
+            excerpt
+            featuredImage {
+              url
+            }
+            categories {
+              name
+              slug
+            }
+          }
+        }
+      }
+    }
+  `;
 
+  const result = await request(graphqlAPI, query, { slug });
+
+  return result.postsConnection.edges;
+};
+
+
+
+/*
 
 export const getCategoryPost = async (slug) => {
   const query = gql`
@@ -233,3 +252,5 @@ export const getCategoryPost = async (slug) => {
   return result.postsConnection.edges;
 }
 
+
+*/

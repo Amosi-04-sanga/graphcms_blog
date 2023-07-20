@@ -4,40 +4,28 @@ import { useEffect, useState } from 'react'
 import { getCategories } from '../services'
 import styles from '../styles/Home.module.css'
 
+
+
 const Categories = () => {
-  const [categories, setCategories] = useState([])
+  const [categories, setCategories] = useState([]);
 
   useEffect(() => {
-    const fetchCategories = async () => {
-      await getCategories()
-        .then(newCategories => {
-          setCategories(newCategories)
-        })
-    }
-    fetchCategories()
-  }, [])
-
+    getCategories().then((newCategories) => {
+      setCategories(newCategories);
+    });
+  }, []);
 
   return (
-    <>
-      <div className="rounded">
-        <h1 className='pt-2' >
-          Categories
-        </h1>
-        <div className={styles.categories}>
-          {
-            categories.length !== 0 && categories.map((category, index) => (
-              <div key={index} className="py-px">
-                <Link href={`/category/${category.slug}`} >
-                  <span className='cursor-pointer' > {category.name} </span>
-                </Link>
-              </div>
-            ))
-          }
-        </div>
-      </div>
-    </>
-  )
-}
+    <div className="bg-white shadow-lg rounded-lg p-8 pb-12 mb-8">
+      <h3 className="text-xl mb-8 font-semibold border-b pb-4">Categories</h3>
+      {categories.map((category, index) => (
+        <Link key={index} href={`/category/${category.slug}`}>
+          <span className={`cursor-pointer block ${(index === categories.length - 1) ? 'border-b-0' : 'border-b'} pb-3 mb-3`}>{category.name}</span>
+        </Link>
+      ))}
+    </div>
+  );
+};
 
-export default Categories
+export default Categories; 
+

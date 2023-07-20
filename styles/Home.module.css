@@ -1,6 +1,6 @@
 .navBar {
-    background-color: rgb(243, 248, 248);
-    box-shadow: 0 0 4px 0 rgba(128, 128, 128, .2);
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 10px 0px rgba(134, 134, 134, 0.5);
     z-index: 11;
 }
 
@@ -95,9 +95,9 @@
 
 /* to top arrow */
 .arrow {
-    width: 2rem;
+    width: 8rem;
     height: 2.4rem;
-    fill: rgba(30, 27, 51, 0.852);
+    fill: rgba(44, 23, 182, 0.852);
     cursor: pointer;
     animation: hang 1.5s ease-in-out infinite;
     position: fixed;
