@@ -1,13 +1,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import styles from "../styles/Home.module.css";
-
-const categories = [
-  { name: "HTML/CSS", slug: "html-css" },
-  { name: "JavaScript", slug: "js" },
-  { name: "react js", slug: "reactjs" },
-  { name: "next js", slug: "next-js" },
-];
+import { NAV } from "../constants";
 
 const Header = () => {
   const [menuOpened, setMenuOpened] = useState(false);
@@ -41,7 +35,7 @@ const Header = () => {
   return (
     <>
       <nav
-        className={`${styles.navBar} py-3 px-2 md:px-8 h-14 relative sticky top-0`}
+        className={`${styles.navBar} py-3 px-4 md:px-8 h-14 relative sticky top-0`}
       >
         <div className="flex justify-between">
           <div>
@@ -56,7 +50,7 @@ const Header = () => {
                 onClick={openMenuHandler}
                 className={`${
                   !menuOpened ? "block" : "hidden"
-                } w-7 h-7 pl-2 cursor-pointer`}
+                } w-9 h-9 pl-2 cursor-pointer`}
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 448 512"
               >
@@ -79,25 +73,21 @@ const Header = () => {
               !menuOpened ? styles.hideNav : styles.headerNavigation
             }`}
           >
-            <Link href="/services">
-              <a>
-                <span className="mr-4 cursor-pointer">Services</span>
-              </a>
-            </Link>
-            <Link href="/about">
-              <a>
-                <span className="mr-4 cursor-pointer">About</span>
-              </a>
-            </Link>
-            <Link href="/contacts">
-              <a>
-                <span className="mr-4 cursor-pointer">Contacts</span>
-              </a>
-            </Link>
+            {NAV.map((item, index) => (
+              <Link key={index} href={item.link}>
+                <span
+                  onClick={() => setMenuOpened(!menuOpened)}
+                  className="mr-4 cursor-pointer"
+                >
+                  {" "}
+                  {item.link}{" "}
+                </span>
+              </Link>
+            ))}
           </div>
         </div>
       </nav>
-      <div onClick={backToTop} >
+      <div >
         <svg
           className={styles.arrow}
           xmlns="http://www.w3.org/2000/svg"
@@ -105,8 +95,6 @@ const Header = () => {
         >
           <path d="M342.6 182.6C336.4 188.9 328.2 192 319.1 192s-16.38-3.125-22.62-9.375L224 109.3V432c0 44.13-35.89 80-80 80H32c-17.67 0-32-14.31-32-32s14.33-32 32-32h112C152.8 448 160 440.8 160 432V109.3L86.62 182.6c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25l127.1-128c12.5-12.5 32.75-12.5 45.25 0l128 128C355.1 149.9 355.1 170.1 342.6 182.6z" />
         </svg>
-
-        
       </div>
     </>
   );

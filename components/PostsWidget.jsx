@@ -24,8 +24,8 @@ const PostsWidget = ({ categories, slug }) => {
 
     return (
         <>
-            <div className="rounded">
-                <h1 className='py-2' >
+            <div className="p-4 mb-4 bg-white shadow-lg mt-4 rounded-lg">
+                <h1 className={`${styles.underline} relative inline-block pt-2 mb-8 uppercase font-bold`} >
                     {
                         slug ?
                             "Related Posts" :

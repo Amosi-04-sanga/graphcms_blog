@@ -16,11 +16,11 @@ const Categories = () => {
   }, []);
 
   return (
-    <div className="bg-white shadow-lg rounded-lg p-8 pb-12 mb-8">
-      <h3 className="text-xl mb-8 font-semibold border-b pb-4">Categories</h3>
+    <div className="bg-white shadow-lg rounded-lg p-4 mb-4">
+      <h3 className={`${styles.underline} relative inline-block uppercase text-xl mb-8 font-semibold border-b`}>Categories</h3>
       {categories.map((category, index) => (
         <Link key={index} href={`/category/${category.slug}`}>
-          <span className={`cursor-pointer block ${(index === categories.length - 1) ? 'border-b-0' : 'border-b'} pb-3 mb-3`}>{category.name}</span>
+          <span className={`${styles.connectedDots} capitalize relative cursor-pointer block pl-6 mb-3`}>{category.name}</span>
         </Link>
       ))}
     </div>

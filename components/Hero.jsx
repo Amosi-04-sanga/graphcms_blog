@@ -1,70 +1,39 @@
 import Image from "next/image";
 import React from "react";
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { Carousel } from "react-responsive-carousel";
+import { TypeAnimation } from "react-type-animation";
 
-function Hero() {
+const Hero = () => {
   return (
-    <>
-      <Carousel
-        showArrows={true}
-        showThumbs={false}
-        infiniteLoop={true}
-        autoPlay={true}
-      >
-        <div className="w-full h-[60vh] ">
-          <img width="full" height="full" src="/movies6.jpg" alt="image" />
-          <div className="legend">
-            <h2>TITLE</h2>
-            <p>
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer
-            </p>
-          </div>
-        </div>
-        <div className="w-full h-[60vh]">
-          <img src="/movies2.jpg" width="full" height="full" alt="image" />
-          <div className="legend">
-            <h2>TITLE</h2>
-            <p>
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer
-            </p>
-          </div>
-        </div>
-        <div className="w-full h-[60vh]">
-          <img src="/movies3.jpg" width="full" height="full" alt="image" />
-          <div className="legend">
-            <h2>TITLE</h2>
-            <p>
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer
-            </p>
-          </div>
-        </div>
-        <div className="w-full h-[60vh]">
-          <img src="/movies4.jpg" width="full" height="full" alt="image" />
-          <div className="legend">
-            <h2>TITLE</h2>
-            <p>
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer
-            </p>
-          </div>
-        </div>
-        <div className="w-full h-[60vh]">
-          <img src="/movies7.jpg" width="full" height="full" alt="image" />
-          <div className="legend">
-            <h2>TITLE</h2>
-            <p>
-              industry. Lorem Ipsum has been the industrys standard dummy text
-              ever since the 1500s, when an unknown printer
-            </p>
-          </div>
-        </div>
-      </Carousel>
-    </>
+    <div className="relative h-[50vh] w-full">
+      <img
+        src="/roadtosuccess.jpg"
+        alt="hero image"
+        className="w-full h-full absolute"
+      />
+      <div className="absolute top-16 left-1/2 -translate-x-2/4 w-3/4 auto">
+        <TypeAnimation
+          sequence={[
+            // Same substring at the start will only be typed out once, initially
+            "We share insights, trends and more on ",
+            2000, // wait 1s before replacing "Mice" with "Hamsters"
+            "We share insights, trends and more on MOVIES",
+            2000,
+            "We share insights, trends and more on TV",
+            2000,
+            "We share insights, trends and more on COMICS",
+            2000,
+            "We share insights, trends and more on GAMING",
+            2000,
+          ]}
+          wrapper="h2"
+          deletionSpeed={10}
+          speed={20}
+          style={{ fontSize: "2em", color: "white", fontWeight: 500, display: "block" }}
+          repeat={Infinity}
+        />
+      </div>
+    </div>
   );
-}
+};
 
 export default Hero;

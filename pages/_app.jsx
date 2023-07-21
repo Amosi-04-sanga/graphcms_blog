@@ -1,6 +1,7 @@
 import '../styles/globals.css'
 import Header from '../components/Header'
 import { useEffect, useState } from 'react'
+import Footer from '../components/Footer'
 
 
 function MyApp({ Component, pageProps }) {
@@ -23,6 +24,7 @@ function MyApp({ Component, pageProps }) {
       <div className="container">
         <Component {...pageProps} />
       </div>
+      < Footer />
     </>
   )
 }

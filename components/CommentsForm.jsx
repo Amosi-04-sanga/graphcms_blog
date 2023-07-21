@@ -66,9 +66,9 @@ const CommentsForm = ({ slug }) => {
   }
 
   return (
-    <div className='mb-12 mt-8 pb-8 shadow-lg' >
-      <h3 className="text-center mb-4">please leave a reply</h3>
-      <div className="grid grid-cols-1 gap-4 px-8 mb-4 mx-auto">
+    <div className='mb-12 mt-8 pb-8 shadow-lg bg-[rgb(35,141,202)] text-white' >
+      <h3 className="text-center mb-4 uppercase pt-4">please leave a reply</h3>
+      <div className="grid grid-cols-1 gap-4 px-8 mb-4 mx-auto text-black font-bold">
         <textarea
           name="comment"
           id="comment"
@@ -80,7 +80,7 @@ const CommentsForm = ({ slug }) => {
         >
         </textarea>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 px-8 mb-4 mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 px-8 mb-4 mx-auto text-black">
         <input
           type="name"
           className={styles.formInput}
@@ -103,7 +103,7 @@ const CommentsForm = ({ slug }) => {
             className='mr-1'
             ref={storeDataEl}
           />
-          <label htmlFor='storeData' className='text-gray-500 text-sm' >save my email and password for next time i comment</label>
+          <label htmlFor='storeData' className='text-white text-sm' >save my email and password for next time i comment</label>
         </div>
       </div>
       {
@@ -111,10 +111,10 @@ const CommentsForm = ({ slug }) => {
         <p className="my-2 text-red-500 text-center italic text-sm">please fill all fields</p>
 
       }
-      <button type='button' onClick={handleFormSubmision} className='text-sm block m-auto p-1 px-8 rounded uppercase hover:bg-purple-300 transition duration-200 ease cursor-pointer bg-purple-200' >post comment</button>
+      <button type='button' onClick={handleFormSubmision} className='text-sm block m-auto p-1 px-8 rounded uppercase text-blue-700 hover:text-blue-800 bg-slate-300 transition duration-200 ease cursor-pointer' >post comment</button>
       {
         showSuccessMessage &&
-        <p className="my-2 text-green-400 text-center italic text-sm">comment submited for review</p>
+        <p className="my-2 text-blue-800 text-center italic text-sm">comment submited for review</p>
       }
     </div>
   )

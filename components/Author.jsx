@@ -15,7 +15,7 @@ const About = () => {
 
   return (
     <>
-      <div>
+      <div className='mt-16'>
         {
           articleAuthor.length !== 0 && (
             <div>
