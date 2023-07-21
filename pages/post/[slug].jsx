@@ -18,7 +18,7 @@ const PostDetails = ({ post }) => {
                     < CommentsForm slug={post.slug} />
                     < Comments slug={post.slug} />
                 </div>
-                <div className="col-span-1 md:col-span-4 text-sm px-4">
+                <div className="col-span-1 md:col-span-4">
                     <div className="sticky top-20">
                         <PostWidget />
                         <Categories />

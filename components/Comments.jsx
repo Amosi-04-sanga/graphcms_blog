@@ -62,14 +62,14 @@ const Comments = ({ slug }) => {
       })
   }, [slug])
 
-  console.log(comments);
+  
 
   return (
     <>
       {
         comments.length > 0 && (
           <div className="pb-4 mb-8 w-[80%] mx-auto">
-            <h3 className='mb-4' > {comments.length} {" "} comments </h3>
+            <h3 className='mb-4 font-bold' > {comments.length} {" "} comments </h3>
             {
               comments.map(comment => (
                 <div key={comment.createdAt} className="mb-4">
