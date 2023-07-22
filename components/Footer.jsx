@@ -5,7 +5,7 @@ import styles from "../styles/Home.module.css";
 
 const Footer = () => {
   return (
-    <div className="flex sm:flex-col bg-[rgb(4,79,122)] text-white h-[40vh] mt-8">
+    <div className="flex bg-[rgb(4,79,122)] text-white h-[40vh] mt-8">
       <div className="p-4 w-[50vw] flex flex-col items-center justify-center">
         {FOOTER.map((item) => (
           <Link key={item.id} href={`/${item.link}`}>

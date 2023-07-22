@@ -1,5 +1,9 @@
 export const NAV = [
     {
+        link: 'categories',
+        id: 'Categories'
+    },
+    {
         link: 'services',
         id: 'Services'
     },
@@ -11,6 +15,7 @@ export const NAV = [
         link: 'contacts',
         id: 'Contacts'
     }
+    
 ]
 
 export const FOOTER = [
